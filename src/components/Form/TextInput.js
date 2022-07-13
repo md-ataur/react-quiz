@@ -1,8 +1,9 @@
 import React from 'react';
+import classes from '../../assets/styles/TextInput.module.css';
 
 const TextInput = ({ icon, ...rest }) => {
     return (
-        <div className="textInput">
+        <div className={classes.textInput}>
             <input {...rest} />
             <span className="material-icons-outlined">{icon}</span>
         </div>

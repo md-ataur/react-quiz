@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import signUpImg from '../../assets/images/signup.svg';
 import Button from '../Button/Button';
-import Checkbox from '../Form/Checkbox';
+import Checkbox from '../Checkbox/Checkbox';
 import Form from '../Form/Form';
 import TextInput from '../Form/TextInput';
 
@@ -20,7 +20,9 @@ const SignUp = () => {
                     <TextInput type="password" placeholder="Enter password" icon="lock" />
                     <TextInput type="password" placeholder="Confirm password" icon="lock_clock" />
                     <Checkbox text="I agree to the Terms &amp; Conditions" />
-                    <Button>Submit now</Button>
+                    <Button>
+                        <span>Submit now</span>
+                    </Button>
                     <div className="info">
                         Already have an account? <Link to="/signin">Login</Link>
                     </div>
