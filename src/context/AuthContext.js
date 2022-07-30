@@ -4,7 +4,6 @@ import {
     onAuthStateChanged,
     signInWithEmailAndPassword,
     signOut,
-    // eslint-disable-next-line prettier/prettier
     updateProfile
 } from 'firebase/auth';
 import React, { useContext, useEffect, useState } from 'react';
@@ -40,12 +39,12 @@ export function AuthProvider({ children }) {
 
         // Update profile
         await updateProfile(auth.currentUser, {
-            displayName: username,
+            displayName: username
         });
 
         const updateUser = auth.currentUser;
         setUser({
-            ...updateUser,
+            ...updateUser
         });
     }
 
@@ -65,7 +64,7 @@ export function AuthProvider({ children }) {
         user,
         signup,
         login,
-        logout,
+        logout
     };
 
     return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
